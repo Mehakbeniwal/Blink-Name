@@ -1,0 +1,50 @@
+int key = LED_BUILTIN ; 
+
+void setup() {
+pinMode(key , OUTPUT); 
+}
+
+void less ()
+{
+  digitalWrite(key , HIGH);
+  delay(1000);
+  digitalWrite(key , LOW);
+  delay(1000);
+}
+
+void large()
+{
+  digitalWrite(key , HIGH);
+  delay(4000); 
+  digitalWrite(key, LOW);
+  delay(1000);  
+}
+void loop() 
+{
+  // for "M" :- 
+  large(); 
+  large(); 
+  delay(3000);
+
+  // for "E" :-
+  less();
+  delay(3000);
+
+  // for "H" :- 
+  less();
+  less();
+  less();
+  less(); 
+  delay(3000);
+
+  // for "A" :-
+  less(); 
+  large(); 
+  delay(3000);
+
+  // for "K" :- 
+  large(); 
+  less();
+  large(); 
+  delay(3000);
+}
